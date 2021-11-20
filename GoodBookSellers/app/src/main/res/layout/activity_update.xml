@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/imgAvatar_Update"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.502"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView700"
+                    android:layout_width="@dimen/dimen130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Tên sách: "
+                    android:textColor="@color/brown"
+                    android:textSize="@dimen/size18"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtTenSach_Update"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edtTenSach_Update" />
+
+                <EditText
+                    android:id="@+id/edtTenSach_Update"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:ems="10"
+                    android:hint="Tên sách"
+                    android:textSize="@dimen/size18"
+                    android:inputType="textMultiLine"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView700"
+                    app:layout_constraintTop_toBottomOf="@+id/imgAvatar_Update" />
+
+
+                <TextView
+                    android:id="@+id/textView6678"
+                    android:layout_width="@dimen/dimen130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Tác giả: "
+                    android:textColor="@color/brown"
+                    android:textSize="@dimen/size18"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtTacgia_Update"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edtTacgia_Update" />
+
+                <EditText
+                    android:id="@+id/edtTacgia_Update"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:ems="10"
+                    android:hint="Tác giả"
+                    android:textSize="@dimen/size18"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/textView6678"
+                    app:layout_constraintTop_toBottomOf="@+id/edtTenSach_Update" />
+
+                <TextView
+                    android:id="@+id/textView93434"
+                    android:layout_width="@dimen/dimen130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Nhà xuất bản: "
+                    android:textColor="@color/brown"
+                    android:textSize="@dimen/size18"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtNhaXuatBan_Update"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edtNhaXuatBan_Update" />
+
+
+                <EditText
+                    android:id="@+id/edtNhaXuatBan_Update"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:ems="10"
+                    android:hint="Nhà xuất bản"
+                    android:inputType="text"
+                    android:textSize="@dimen/size18"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/textView93434"
+                    app:layout_constraintTop_toBottomOf="@+id/edtNgonNgu_Update" />
+
+                <TextView
+                    android:id="@+id/textView77447"
+                    android:layout_width="@dimen/dimen130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Năm xuất bản: "
+                    android:textColor="@color/brown"
+                    android:textSize="@dimen/size18"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtNamXuatBan_Update"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edtNamXuatBan_Update" />
+
+                <EditText
+                    android:id="@+id/edtNamXuatBan_Update"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:ems="10"
+                    android:hint="Năm xuất bản"
+                    android:inputType="number"
+                    android:textSize="@dimen/size18"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView77447"
+                    app:layout_constraintTop_toBottomOf="@+id/edtNhaXuatBan_Update" />
+
+
+
+                <EditText
+                    android:id="@+id/edtNgonNgu_Update"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:ems="10"
+                    android:hint="Ngôn ngữ"
+                    android:textSize="@dimen/size18"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView10454"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner_TheLoai_Update" />
+
+
+                <TextView
+                    android:id="@+id/textView124543"
+                    android:layout_width="@dimen/dimen130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Thể loại: "
+                    android:textColor="@color/brown"
+                    android:textSize="@dimen/size18"
+                    app:layout_constraintBottom_toBottomOf="@+id/spinner_TheLoai_Update"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/spinner_TheLoai_Update" />
+
+
+
+                <TextView
+                    android:id="@+id/textView10454"
+                    android:layout_width="@dimen/dimen130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Ngôn ngữ: "
+                    android:textColor="@color/brown"
+                    android:textSize="@dimen/size18"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtNgonNgu_Update"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edtNgonNgu_Update" />
+
+
+                <TextView
+                    android:id="@+id/textView113434"
+                    android:layout_width="@dimen/dimen130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Giá bán: "
+                    android:textColor="@color/brown"
+                    android:textSize="@dimen/size18"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtGiaBan_Update"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edtGiaBan_Update" />
+
+                <EditText
+                    android:id="@+id/edtGiaBan_Update"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Giá bán"
+                    android:inputType="number"
+                    android:textSize="@dimen/size18"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView113434"
+                    app:layout_constraintTop_toBottomOf="@+id/edtNamXuatBan_Update" />
+
+
+                <TextView
+                    android:id="@+id/textView117876"
+                    android:layout_width="@dimen/dimen130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Số trang: "
+                    android:textColor="@color/brown"
+                    android:textSize="@dimen/size18"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtSoTrang_Update"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edtSoTrang_Update" />
+
+                <EditText
+                    android:id="@+id/edtSoTrang_Update"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Số trang"
+                    android:inputType="number"
+                    android:textSize="@dimen/size18"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView117876"
+                    app:layout_constraintTop_toBottomOf="@+id/edtGiaBan_Update" />
+
+
+                <RadioGroup
+                    android:id="@+id/radioGroup_Update"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView1875"
+                    app:layout_constraintTop_toBottomOf="@+id/edtSoTrang_Update">
+
+                    <RadioButton
+                        android:id="@+id/rb_ConHang_Update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen16dp"
+                        android:text="Còn hàng"
+                        android:textSize="@dimen/size16"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_HetHang_Update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hết hàng"
+                        android:textSize="@dimen/size16"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView1875"
+                    android:layout_width="@dimen/dimen130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Trạng thái: "
+                    android:textColor="@color/brown"
+                    android:textSize="@dimen/size18"
+                    app:layout_constraintBottom_toBottomOf="@+id/radioGroup_Update"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/radioGroup_Update" />
+
+                <TextView
+                    android:id="@+id/textView14546"
+                    android:layout_width="@dimen/dimen130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Giới thiệu: "
+                    android:textColor="@color/brown"
+                    android:textSize="@dimen/size18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup_Update" />
+
+
+                <EditText
+                    android:id="@+id/edtGioiThieu_Update"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:ems="10"
+                    android:hint="Giới thiệu"
+                    android:textSize="@dimen/size18"
+                    android:inputType="textMultiLine"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/textView14546"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup_Update" />
+
+                <Button
+                    android:id="@+id/btnCancel_Update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Hủy"
+                    android:textSize="@dimen/size14"
+                    app:layout_constraintEnd_toStartOf="@+id/btnDelete_Update"
+                    app:layout_constraintStart_toEndOf="@+id/btnUpdate_Update"
+                    app:layout_constraintTop_toBottomOf="@+id/edtGioiThieu_Update" />
+
+                <Button
+                    android:id="@+id/btnDelete_Update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="Xóa"
+                    android:textSize="@dimen/size14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtGioiThieu_Update" />
+
+                <Button
+                    android:id="@+id/btnUpdate_Update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Lưu"
+                    android:textSize="@dimen/size14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtGioiThieu_Update" />
+
+                <Spinner
+                    android:id="@+id/spinner_TheLoai_Update"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView124543"
+                    app:layout_constraintTop_toBottomOf="@+id/edtTacgia_Update" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar_Update"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtGioiThieu_Update" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

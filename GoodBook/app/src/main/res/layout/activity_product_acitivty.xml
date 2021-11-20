@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductAcitivty">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/contrainBottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <ImageView
+                android:layout_margin="@dimen/size8dp"
+                android:id="@+id/imgAvatar_product"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/placeholder" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen16dp"
+                android:layout_marginRight="@dimen/size8dp"
+                android:layout_marginLeft="@dimen/size8dp"
+                android:textSize="@dimen/size20"
+                android:textStyle="bold"
+                android:text="abc acb abc"
+                android:gravity="center"
+                android:id="@+id/txtTenSach_Product"/>
+
+
+            <View
+                android:layout_marginTop="@dimen/dimen16dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen16dp">
+
+                <TextView
+                    android:id="@+id/txtGiaSach_Product"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="left"
+                    android:textColor="@color/red"
+                    android:text="100000 VND"
+                    android:textSize="@dimen/size18"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/txtTrangThai_Product"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtTrangThai_Product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="Còn hàng"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/size18"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_marginTop="@dimen/dimen16dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <TextView
+                android:drawableLeft="@drawable/ic_baseline_shop"
+                android:id="@+id/txtShop_Product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/size8dp"
+               android:background="@drawable/bg_xem_shop"
+                android:text=" Xem Shop"
+                android:paddingLeft="@dimen/size8dp"
+                android:paddingRight="@dimen/size8dp"
+                android:paddingBottom="@dimen/size5dp"
+                android:paddingTop="@dimen/size5dp"
+                android:textColor="@color/red"
+                android:textSize="@dimen/size18"
+                android:textStyle="" />
+            <View
+                android:layout_marginTop="@dimen/size8dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size8dp"
+                android:layout_marginRight="@dimen/size8dp"
+                android:layout_marginLeft="@dimen/size8dp">
+
+                <TextView
+
+                    android:textColor="@color/brown"
+                    android:layout_width="@dimen/dimen115dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/size18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/textView6"
+                    android:text="Tác Giả:"/>
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="left"
+                    android:text="ggggggggggggggggggggggggggggg"
+                    android:textSize="@dimen/size18"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    app:layout_constraintStart_toEndOf="@+id/textView6"
+                    android:id="@+id/txtTacGia_Product"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen16dp"
+                android:layout_marginRight="@dimen/size8dp"
+                android:layout_marginLeft="@dimen/size8dp">
+
+                <TextView
+                    android:textColor="@color/brown"
+                    android:layout_width="@dimen/dimen115dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/size18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/textView611"
+                    android:text="Thể loại:"/>
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="left"
+                    android:text="ggggggggggggggggggggggggggggg"
+                    android:textSize="@dimen/size18"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    app:layout_constraintStart_toEndOf="@+id/textView611"
+                    android:id="@+id/txtTheLoai_Product"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen16dp"
+                android:layout_marginRight="@dimen/size8dp"
+                android:layout_marginLeft="@dimen/size8dp">
+
+                <TextView
+                    android:textColor="@color/brown"
+                    android:layout_width="@dimen/dimen115dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/size18"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/textView622"
+                    android:text="Ngôn ngữ:"/>
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="left"
+                    android:text="ggggggggggggggggggggggggggggg"
+                    android:textSize="@dimen/size18"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    app:layout_constraintStart_toEndOf="@+id/textView622"
+                    android:id="@+id/txtNgonNgu_Product"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen16dp"
+                android:layout_marginRight="@dimen/size8dp"
+                android:layout_marginLeft="@dimen/size8dp">
+
+                <TextView
+                    android:textColor="@color/brown"
+                    android:layout_width="@dimen/dimen115dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/size18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/textView633"
+                    android:text="Nhà xuất bản:"/>
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="left"
+                    android:text="ggggggggggggggggggggggggggggg"
+                    android:textSize="@dimen/size18"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    app:layout_constraintStart_toEndOf="@+id/textView633"
+                    android:id="@+id/txtNhaXuatBan_Product"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen16dp"
+                android:layout_marginRight="@dimen/size8dp"
+                android:layout_marginLeft="@dimen/size8dp">
+
+                <TextView
+                    android:id="@+id/textView644"
+                    android:layout_width="@dimen/dimen115dp"
+                    android:layout_height="wrap_content"
+                    android:text="Năm xuất bản:"
+                    android:textColor="@color/brown"
+                    android:textSize="@dimen/size18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="left"
+                    android:text="ggggggggggggggggggggggggggggg"
+                    android:textSize="@dimen/size18"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    app:layout_constraintStart_toEndOf="@+id/textView644"
+                    android:id="@+id/txtNamXuatBan_Product"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen16dp"
+                android:layout_marginRight="@dimen/size8dp"
+                android:layout_marginLeft="@dimen/size8dp">
+
+                <TextView
+                    android:id="@+id/textView666"
+                    android:layout_width="@dimen/dimen115dp"
+                    android:layout_height="wrap_content"
+                    android:text="Số trang:"
+                    android:textColor="@color/brown"
+                    android:textSize="@dimen/size18"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="left"
+                    android:text="ggggggggggggggggggggggggggggg"
+                    android:textSize="@dimen/size18"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    app:layout_constraintStart_toEndOf="@+id/textView666"
+                    android:id="@+id/txtSoTrang_Product"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen16dp"
+                android:layout_marginRight="@dimen/size8dp"
+                android:layout_marginLeft="@dimen/size8dp">
+
+                <TextView
+                    android:textColor="@color/brown"
+                    android:layout_width="@dimen/dimen115dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/size18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/textView655"
+                    android:text="Giới thiệu:"/>
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="left"
+                    android:text="ggggggggggggggggggggggggggggg"
+                    android:textSize="@dimen/size18"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    app:layout_constraintStart_toEndOf="@+id/textView655"
+                    android:id="@+id/txtGioiThieu_Product"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contrainBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+
+            android:id="@+id/imgTru"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/icon_tru"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txtSoLuong_Product"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/txtSoLuong_Product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size18"
+            app:layout_constraintBottom_toBottomOf="@+id/imgTru"
+            app:layout_constraintEnd_toStartOf="@+id/btnTVGH_product"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imgTru"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imgCong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/icon_cong"
+            app:layout_constraintBottom_toBottomOf="@+id/txtSoLuong_Product"
+            app:layout_constraintStart_toEndOf="@+id/txtSoLuong_Product"
+            app:layout_constraintTop_toTopOf="@+id/txtSoLuong_Product" />
+
+        <Button
+            android:id="@+id/btnTVGH_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/orange"
+            android:text="Thêm vào giỏ hàng"
+            android:textSize="@dimen/size14"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>

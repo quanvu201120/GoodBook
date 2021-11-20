@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Trang chủ"
+        android:id="@+id/item_home"
+        android:icon="@drawable/ic_baseline_home_24"/>
+    <item android:title="Tài khoản"
+        android:id="@+id/item_account"
+        android:icon="@drawable/account"/>
+    <item android:title="Giỏ hàng của tôi"
+        android:id="@+id/item_cart"
+        android:icon="@drawable/ic_baseline_shop_2_24"/>
+    <item android:title="Đăng xuất"
+        android:icon="@drawable/log_out"
+        android:id="@+id/item_logout"/>
+</menu>

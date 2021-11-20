@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".UpdateAddressFragment">
+
+    <TextView
+        android:id="@+id/textView4545466662"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Cập nhật chỉ mới"
+        android:textColor="@color/brown"
+        android:textSize="@dimen/size24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtHoTen_UpdateAdress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Họ tên"
+        android:inputType="textPersonName"
+        android:paddingLeft="@dimen/dimen10dp"
+        android:textSize="@dimen/size18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4545466662" />
+
+    <EditText
+        android:id="@+id/edtDiaChi_2_UpdateAdress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Quận/Huyện"
+        android:inputType="textPersonName"
+        android:paddingLeft="@dimen/dimen10dp"
+        android:textSize="@dimen/size18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtDiaChi_1_UpdateAdress" />
+
+    <EditText
+        android:id="@+id/edtDiaChi_3_UpdateAdress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Phường/Xã"
+        android:inputType="textPersonName"
+        android:paddingLeft="@dimen/dimen10dp"
+        android:textSize="@dimen/size18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtDiaChi_2_UpdateAdress" />
+
+    <EditText
+        android:id="@+id/edtDiaChi_4_UpdateAdress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Tòa nhà, số nhà, tên đường..."
+        android:inputType="textPersonName"
+        android:paddingLeft="@dimen/dimen10dp"
+        android:textSize="@dimen/size18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtDiaChi_3_UpdateAdress" />
+
+    <EditText
+        android:id="@+id/edtDiaChi_1_UpdateAdress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Tỉnh/Thành phố"
+        android:inputType="textPersonName"
+        android:paddingLeft="@dimen/dimen10dp"
+        android:textSize="@dimen/size18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSDT_UpdateAdress" />
+
+    <EditText
+        android:id="@+id/edtSDT_UpdateAdress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Số điện thoại"
+        android:inputType="phone"
+        android:paddingLeft="@dimen/dimen10dp"
+        android:textSize="@dimen/size18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtHoTen_UpdateAdress" />
+
+    <Button
+        android:id="@+id/btnOK_UpdateAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/orange"
+        android:text="Hoàn thành"
+        android:textSize="@dimen/size14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnCancel_UpdateAddress"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtDiaChi_4_UpdateAdress" />
+
+    <Button
+        android:id="@+id/btnCancel_UpdateAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/orange"
+        android:text="Trở lại"
+        android:textSize="@dimen/size14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnOK_UpdateAddress"
+        app:layout_constraintTop_toBottomOf="@+id/edtDiaChi_4_UpdateAdress" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_UpdateAddress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_progress_create_address"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/btnOK_UpdateAddress"
+        app:layout_constraintEnd_toEndOf="@+id/btnCancel_UpdateAddress"
+        app:layout_constraintStart_toStartOf="@+id/btnOK_UpdateAddress"
+        app:layout_constraintTop_toTopOf="@+id/btnOK_UpdateAddress" />
+</androidx.constraintlayout.widget.ConstraintLayout>

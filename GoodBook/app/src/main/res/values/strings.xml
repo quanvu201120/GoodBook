@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">GoodBook</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="intro1">Chào mừng đến với GoodBook</string>
+    <string name="intro2">Uy tín\ntạo thương hiệu</string>
+    <string name="intro3">Bật thông báo để không sót ưu đãi</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="nguoiban"><u>Truy cập người bán</u>.</string>
+    <string name="select_address">Chọn địa chỉ</string>
+</resources>

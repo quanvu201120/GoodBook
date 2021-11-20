@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="size18">18sp</dimen>
+    <dimen name="size40">40sp</dimen>
+    <dimen name="size20">20sp</dimen>
+    <dimen name="size24">24sp</dimen>
+    <dimen name="dimen16dp">16dp</dimen>
+    <dimen name="size10dp">10dp</dimen>
+    <dimen name="size8dp">8dp</dimen>
+    <dimen name="size30">30sp</dimen>
+    <dimen name="dimen10dp">10dp</dimen>
+    <dimen name="dimen40dp">40dp</dimen>
+    <dimen name="size16">16sp</dimen>
+    <dimen name="dimen130dp">130dp</dimen>
+    <dimen name="dimen100dp">100dp</dimen>
+    <dimen name="size14">14sp</dimen>
+</resources>
