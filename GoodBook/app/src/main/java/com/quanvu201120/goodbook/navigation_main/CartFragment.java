@@ -109,7 +109,8 @@ public class CartFragment extends Fragment {
                                 Address addressClick = addressArrayList.get(position);
                                 Intent intent = new Intent(getContext(), OrderActivity.class);
                                 intent.putExtra("AddressFromCart",addressClick);
-                                intent.putExtra("TongTienFromCart",txtTongTien.getText().toString());
+                                intent.putExtra("TongTienTxtFromCart",txtTongTien.getText().toString());
+                                intent.putExtra("TongTienFromCart",TongTien);
                                 startActivity(intent);
 
                                 dialog.dismiss();

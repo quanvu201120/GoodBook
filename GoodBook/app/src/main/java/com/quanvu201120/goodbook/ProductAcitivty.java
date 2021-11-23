@@ -119,7 +119,7 @@ public class ProductAcitivty extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProductAcitivty.this,ShopActivity.class);
-                intent.putExtra("ID_SHOP",sach.getID_Shop());
+                intent.putExtra("ID_SHOP",sach.getId_Shop());
                 startActivity(intent);
             }
         });
@@ -142,7 +142,7 @@ public class ProductAcitivty extends AppCompatActivity {
 
                     //
                     for ( ItemCart tmp : LoadingActivity.mCart){
-                        if (MainActivity.checkString(tmp.getId_Sach(),sach.getID())){
+                        if (MainActivity.checkString(tmp.getId_Sach(),sach.getId())){
                             checkId = true;
                             itemCart = tmp;
                             itemCart_index = tmp;
@@ -177,7 +177,7 @@ public class ProductAcitivty extends AppCompatActivity {
                     Date date = new Date();
                     String ID_CART = LoadingActivity.mUser.getU_Id() + date.getTime();
 
-                    itemCart = new ItemCart(ID_CART,sach.getID(),sach.getID_Shop(), LoadingActivity.mUser.getU_Id(), sach.getHinhAnh(),sach.getTenSach(), sach.getGiaBan(), SoLuong);
+                    itemCart = new ItemCart(ID_CART,sach.getId(),sach.getId_Shop(), LoadingActivity.mUser.getU_Id(), sach.getHinhAnh(),sach.getTenSach(), sach.getGiaBan(), SoLuong);
 
 //                Log.e("ABC CART",LoadingActivity.mUser.getUs_Cart() + "");
 

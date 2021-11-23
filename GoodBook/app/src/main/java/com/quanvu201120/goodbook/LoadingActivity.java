@@ -22,6 +22,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.quanvu201120.goodbook.model.ItemCart;
 import com.quanvu201120.goodbook.model.User;
+import com.quanvu201120.goodbook.model.mHistory;
 
 import java.io.File;
 import java.io.IOException;
@@ -37,6 +38,7 @@ public class LoadingActivity extends AppCompatActivity {
     public static User mUser;
     public static File image_file;
     public static ArrayList<ItemCart> mCart;
+    public static ArrayList<mHistory> mHistory;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,7 +69,10 @@ public class LoadingActivity extends AppCompatActivity {
                             Getcart();
                         }
 
-
+                        mHistory = new ArrayList<>();
+                        if (mUser.getUs_History()!=null){
+                            GetHistory();
+                        }
 
                         startActivity(intent);
                     }
@@ -78,7 +83,7 @@ public class LoadingActivity extends AppCompatActivity {
     }
 
     public static void getImage_Storage(String image){
-        if (!MainActivity.checkString("null",image)){
+        if (!MainActivity.checkString("default_null",image)){
             try {
 
                 image_file = File.createTempFile("image","png");
@@ -135,5 +140,18 @@ public class LoadingActivity extends AppCompatActivity {
 
     }
 
+    public static void GetHistory(){
+        mHistory.clear();
+        for (String s : mUser.getUs_History()){
+            firebaseFirestore.collection("History").document(s).get()
+                    .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                        @Override
+                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+                            mHistory.add(documentSnapshot.toObject(mHistory.class));
+                        }
+                    });
+        }
+
+    }
 
 }

@@ -221,15 +221,15 @@ public class UpdateActivity extends AppCompatActivity {
                     btnDelete_Update.setVisibility(View.INVISIBLE);
                     progressBar_UpdateBook.setVisibility(View.VISIBLE);
 
-                    Sach sach_Update = new Sach(sach.getID(),TrangThai,TenSach,TacGia,NhaXuatBan,NamXuatBan,TheLoai,NgonNgu,sach.getHinhAnh(),
+                    Sach sach_Update = new Sach(sach.getId(),TrangThai,TenSach,TacGia,NhaXuatBan,NamXuatBan,TheLoai,NgonNgu,sach.getHinhAnh(),
                             GiaBan,SoTrang,GioiThieu,LoadingActivity.mUser.getU_Id());
 
                     if(URI_IMAGE != null){
                         firebaseStorage.getReference().child(sach_Update.getHinhAnh()).putFile(URI_IMAGE);
                     }
 
-                    firebaseFirestore.collection("Product").document(sach_Update.getID()).delete();
-                    firebaseFirestore.collection("Product").document(sach_Update.getID()).set(sach_Update)
+                    firebaseFirestore.collection("Product").document(sach_Update.getId()).delete();
+                    firebaseFirestore.collection("Product").document(sach_Update.getId()).set(sach_Update)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
@@ -272,9 +272,9 @@ public class UpdateActivity extends AppCompatActivity {
                         progressBar_UpdateBook.setVisibility(View.VISIBLE);
 
                         ArrayList<String> product_update = LoadingActivity.mUser.getUs_Product();
-                        product_update.remove(sach.getID());
+                        product_update.remove(sach.getId());
                         firebaseFirestore.collection("User").document(LoadingActivity.mUser.getU_Id()).update("us_Product",product_update);
-                        firebaseFirestore.collection("Product").document(sach.getID()).delete();
+                        firebaseFirestore.collection("Product").document(sach.getId()).delete();
                         firebaseStorage.getReference().child(sach.getHinhAnh()).delete();
 //                                .addOnSuccessListener(new OnSuccessListener<Void>() {
 //                                    @Override
@@ -290,7 +290,7 @@ public class UpdateActivity extends AppCompatActivity {
                                 public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                                     for (DocumentSnapshot snapshot : queryDocumentSnapshots.getDocuments()){
                                         ItemCart item = snapshot.toObject(ItemCart.class);
-                                        if (item.getId_Sach().equals(sach.getID())){
+                                        if (item.getId_Sach().equals(sach.getId())){
 
                                             firebaseFirestore.collection("Cart").document(item.getId_Cart()).delete();
                                             firebaseFirestore.collection("User").document(item.getId_User()).get()

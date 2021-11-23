@@ -21,6 +21,7 @@ import com.quanvu201120.goodbook.model.Sach;
 import com.quanvu201120.goodbook.model.SachAdapter;
 import com.quanvu201120.goodbook.navigation_main.AccountFragment;
 import com.quanvu201120.goodbook.navigation_main.CartFragment;
+import com.quanvu201120.goodbook.navigation_main.HistoryFragment;
 import com.quanvu201120.goodbook.navigation_main.HomeFragment;
 
 public class MainActivity extends AppCompatActivity implements SachAdapter.onItemSachClick {
@@ -92,9 +93,17 @@ public class MainActivity extends AppCompatActivity implements SachAdapter.onIte
 
                 break;
 
-            case  R.id.item_logout:
+            case  R.id.item_history:
 
                 navigationView.getMenu().getItem(3).setChecked(true);
+                fragment = new HistoryFragment();
+
+                break;
+
+
+            case  R.id.item_logout:
+
+                navigationView.getMenu().getItem(4).setChecked(true);
 
                 Intent intent = new Intent(MainActivity.this,LoginActivity.class);
                 startActivity(intent);

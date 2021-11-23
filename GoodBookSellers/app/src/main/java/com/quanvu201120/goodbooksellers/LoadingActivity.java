@@ -20,21 +20,24 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.quanvu201120.goodbooksellers.model.Order;
 import com.quanvu201120.goodbooksellers.model.User;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class LoadingActivity extends AppCompatActivity {
 
     ProgressBar progressBar;
 
     FirebaseUser firebaseUser;
-    FirebaseFirestore firebaseFirestore;
+    public static FirebaseFirestore firebaseFirestore;
     public static FirebaseStorage firebaseStorage;
 
     public static User mUser;
     public static File image_file;
+    public static ArrayList<Order> mOrder1, mOrder2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +51,10 @@ public class LoadingActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar_loading);
         progressBar.setIndeterminateDrawable(new WanderingCubes());
 
+
+        mOrder1 = new ArrayList<>();
+        mOrder2 = new ArrayList<>();
+
         firebaseFirestore.collection("User").document(firebaseUser.getUid()).get()
                 .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                     @Override
@@ -58,9 +65,17 @@ public class LoadingActivity extends AppCompatActivity {
 
                         Intent intent = new Intent(LoadingActivity.this,MainActivity.class);
 
-                        startActivity(intent);
-
                         getDataRealTimeFireStore_User();
+
+
+
+                        if (mUser.getUs_Order() != null){
+                            GetOrder();
+                        }
+
+
+
+                        startActivity(intent);
                     }
                 });
 
@@ -105,6 +120,31 @@ public class LoadingActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public static void GetOrder(){
+        mOrder1.clear();
+        mOrder2.clear();
+        for (String s : mUser.getUs_Order()){
+            firebaseFirestore.collection("Order").document(s).get()
+                    .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                        @Override
+                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+
+                            Order order = documentSnapshot.toObject(Order.class);
+                            if (order.getTrangThai().equals("0")){
+                                mOrder1.add(order);
+                            }
+                            else {
+                                mOrder2.add(order);
+                            }
+
+
+                        }
+                    });
+        }
+
+
     }
 
 

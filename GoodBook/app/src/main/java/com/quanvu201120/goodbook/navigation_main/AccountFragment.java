@@ -83,7 +83,7 @@ public class AccountFragment extends Fragment {
             txtEmail_Account.setText(LoadingActivity.mUser.getU_Email());
             txtName_Account.setText(LoadingActivity.mUser.getU_Name());
             txtPhone_Account.setText(LoadingActivity.mUser.getU_Phone());
-            if (!checkString("null",LoadingActivity.mUser.getU_Avatar())){
+            if (!checkString("default_null",LoadingActivity.mUser.getU_Avatar())){
                 Bitmap bitmap = BitmapFactory.decodeFile(LoadingActivity.image_file.getPath());
                 imgAvatar_Account.setImageBitmap(bitmap);
             }

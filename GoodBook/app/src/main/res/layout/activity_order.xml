@@ -91,5 +91,18 @@
         app:layout_constraintBottom_toTopOf="@+id/txt_phone_order"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBarOrder"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_DatHang_order"
+        app:layout_constraintStart_toEndOf="@+id/txt_tongtien_order"
+        app:layout_constraintTop_toBottomOf="@+id/txt_address_order" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
     <TextView
+        android:layout_marginTop="@dimen/size5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="@dimen/size20"
@@ -11,6 +12,12 @@
         android:textStyle="bold"
         android:gravity="center"
         android:textColor="@color/orange"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/orange"
+        android:layout_marginTop="@dimen/size5dp"
+        android:layout_marginBottom="@dimen/size5dp"/>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="400dp"

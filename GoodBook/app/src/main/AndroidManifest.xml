@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.quanvu201120.goodbook">
+    package="com.quanvu201120.goodbook" >
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,8 +11,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.GoodBook">
-        <activity android:name=".OrderActivity"></activity>
+        android:theme="@style/Theme.GoodBook" >
+        <activity android:name=".HistoryActivity" >
+        </activity>
+        <activity android:name=".OrderActivity" />
         <activity android:name=".ShopActivity" />
         <activity android:name=".CreateAddressActivity" />
         <activity android:name=".AddressActivity" />
@@ -21,7 +23,7 @@
         <activity android:name=".ProductAcitivty" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".IntroActivity">
+        <activity android:name=".IntroActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

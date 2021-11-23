@@ -92,7 +92,7 @@ public class SignUpActivity extends AppCompatActivity {
                                 public void onSuccess(AuthResult authResult) {
 
                                     String UserID = authResult.getUser().getUid();
-                                    User user = new User(UserID,email,name,phone,"null","default_null",null,null,null,null,null);
+                                    User user = new User(UserID,email,name,phone,"default_null","default_null",null,null,null,null,null);
                                     firestore.collection("User").document(UserID).set(user)
                                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                                 @Override

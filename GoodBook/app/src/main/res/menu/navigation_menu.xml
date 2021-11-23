@@ -11,6 +11,11 @@
     <item android:title="Giỏ hàng của tôi"
         android:id="@+id/item_cart"
         android:icon="@drawable/ic_baseline_shop_2_24"/>
+
+    <item android:title="Lịch sử mua hàng"
+        android:id="@+id/item_history"
+        android:icon="@drawable/ic_baseline_history_24"/>
+
     <item android:title="Đăng xuất"
         android:icon="@drawable/log_out"
         android:id="@+id/item_logout"/>
